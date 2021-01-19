@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Apache Hivetest - jdbc:hive2://10.3.0.60:10000/hive;httpPath=cliservice" uuid="16fe98de-63ad-46da-a19f-35b16a47ee8d">
+      <driver-ref>java.sql.Driver</driver-ref>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.apache.hive.jdbc.HiveDriver</jdbc-driver>
+      <jdbc-url>jdbc:hive2://10.3.0.60:10000/hive;httpPath=cliservice</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

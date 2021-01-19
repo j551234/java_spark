@@ -1,0 +1,70 @@
+Manifest-Version: 1.0
+Class-Path: lib/spark-sql_2.12-2.4.0.jar lib/univocity-parsers-2.7.3.j
+ ar lib/spark-catalyst_2.12-2.4.0.jar lib/spark-sketch_2.12-2.4.0.jar 
+ lib/spark-core_2.12-2.4.0.jar lib/spark-launcher_2.12-2.4.0.jar lib/s
+ park-kvstore_2.12-2.4.0.jar lib/spark-unsafe_2.12-2.4.0.jar lib/spark
+ -tags_2.12-2.4.0.jar lib/orc-core-1.5.2-nohive.jar lib/orc-mapreduce-
+ 1.5.2-nohive.jar lib/parquet-hadoop-1.10.0.jar lib/parquet-column-1.1
+ 0.0.jar lib/spark-network-shuffle_2.12-2.4.0.jar lib/spark-network-co
+ mmon_2.12-2.4.0.jar lib/metrics-json-3.1.5.jar lib/jackson-module-sca
+ la_2.12-2.6.7.1.jar lib/jackson-databind-2.6.7.1.jar lib/arrow-vector
+ -0.10.0.jar lib/xbean-asm6-shaded-4.8.jar lib/unused-1.0.0.jar lib/av
+ ro-mapred-1.8.2-hadoop2.jar lib/avro-ipc-1.8.2.jar lib/hadoop-client-
+ 2.6.5.jar lib/hadoop-common-2.6.5.jar lib/avro-1.8.2.jar lib/chill_2.
+ 12-0.9.3.jar lib/chill-java-0.9.3.jar lib/hadoop-mapreduce-client-app
+ -2.6.5.jar lib/hadoop-mapreduce-client-jobclient-2.6.5.jar lib/hadoop
+ -mapreduce-client-shuffle-2.6.5.jar lib/hadoop-mapreduce-client-commo
+ n-2.6.5.jar lib/hadoop-mapreduce-client-core-2.6.5.jar lib/hadoop-yar
+ n-client-2.6.5.jar lib/hadoop-yarn-server-nodemanager-2.6.5.jar lib/h
+ adoop-yarn-server-common-2.6.5.jar lib/hadoop-yarn-common-2.6.5.jar l
+ ib/jaxb-api-2.2.2.jar lib/activation-1.1.1.jar lib/curator-recipes-2.
+ 6.0.jar lib/hadoop-auth-2.6.5.jar lib/curator-framework-2.6.0.jar lib
+ /curator-client-2.6.0.jar lib/zookeeper-3.4.6.jar lib/javax.servlet-a
+ pi-3.1.0.jar lib/commons-lang3-3.5.jar lib/commons-math3-3.4.1.jar li
+ b/arrow-memory-0.10.0.jar lib/jsr305-3.0.2.jar lib/jul-to-slf4j-1.7.1
+ 6.jar lib/jcl-over-slf4j-1.7.16.jar lib/slf4j-log4j12-1.7.16.jar lib/
+ metrics-jvm-3.1.5.jar lib/metrics-graphite-3.1.5.jar lib/metrics-core
+ -3.1.5.jar lib/orc-shims-1.5.2.jar lib/parquet-encoding-1.10.0.jar li
+ b/parquet-common-1.10.0.jar lib/parquet-format-2.4.0.jar lib/apacheds
+ -kerberos-codec-2.0.0-M15.jar lib/apacheds-i18n-2.0.0-M15.jar lib/api
+ -asn1-api-1.0.0-M20.jar lib/api-util-1.0.0-M20.jar lib/slf4j-api-1.7.
+ 25.jar lib/hadoop-hdfs-2.6.5.jar lib/log4j-1.2.17.jar lib/compress-lz
+ f-1.0.3.jar lib/snappy-java-1.1.7.1.jar lib/lz4-java-1.4.0.jar lib/zs
+ td-jni-1.3.2-2.jar lib/RoaringBitmap-0.5.11.jar lib/commons-net-3.1.j
+ ar lib/json4s-jackson_2.12-3.5.3.jar lib/scala-reflect-2.12.7.jar lib
+ /scala-parser-combinators_2.12-1.1.0.jar lib/json4s-core_2.12-3.5.3.j
+ ar lib/json4s-ast_2.12-3.5.3.jar lib/json4s-scalap_2.12-3.5.3.jar lib
+ /scala-xml_2.12-1.0.6.jar lib/scala-library-2.12.7.jar lib/jersey-con
+ tainer-servlet-2.22.2.jar lib/jersey-container-servlet-core-2.22.2.ja
+ r lib/jersey-server-2.22.2.jar lib/jersey-client-2.22.2.jar lib/jerse
+ y-media-jaxb-2.22.2.jar lib/jersey-common-2.22.2.jar lib/netty-all-4.
+ 1.17.Final.jar lib/netty-3.9.9.Final.jar lib/stream-2.7.0.jar lib/ivy
+ -2.4.0.jar lib/oro-2.0.8.jar lib/pyrolite-4.13.jar lib/py4j-0.10.7.ja
+ r lib/commons-crypto-1.0.0.jar lib/janino-3.0.9.jar lib/commons-compi
+ ler-3.0.9.jar lib/antlr4-runtime-4.7.jar lib/commons-httpclient-3.1.j
+ ar lib/httpclient-4.2.5.jar lib/commons-codec-1.10.jar lib/hadoop-yar
+ n-api-2.6.5.jar lib/protobuf-java-2.5.0.jar lib/commons-configuration
+ -1.6.jar lib/commons-lang-2.6.jar lib/aircompressor-0.10.jar lib/parq
+ uet-jackson-1.10.0.jar lib/jackson-mapper-asl-1.9.13.jar lib/jackson-
+ jaxrs-1.9.13.jar lib/jackson-xc-1.9.13.jar lib/jackson-core-asl-1.9.1
+ 3.jar lib/jackson-annotations-2.6.7.jar lib/jackson-core-2.7.9.jar li
+ b/arrow-format-0.10.0.jar lib/joda-time-2.9.9.jar lib/hppc-0.7.2.jar 
+ lib/flatbuffers-1.2.0-3f79e055.jar lib/jackson-module-paranamer-2.7.9
+ .jar lib/paranamer-2.8.jar lib/commons-compress-1.8.1.jar lib/xz-1.5.
+ jar lib/kryo-shaded-4.0.2.jar lib/hadoop-annotations-2.6.5.jar lib/le
+ veldbjni-all-1.8.jar lib/htrace-core-3.0.4.jar lib/guava-16.0.1.jar l
+ ib/javax.ws.rs-api-2.0.1.jar lib/hk2-locator-2.4.0-b34.jar lib/hk2-ap
+ i-2.4.0-b34.jar lib/javax.inject-2.4.0-b34.jar lib/javax.annotation-a
+ pi-1.2.jar lib/jersey-guava-2.22.2.jar lib/osgi-resource-locator-1.0.
+ 1.jar lib/validation-api-1.1.0.Final.jar lib/minlog-1.3.0.jar lib/obj
+ enesis-2.5.1.jar lib/commons-cli-1.2.jar lib/xmlenc-0.52.jar lib/comm
+ ons-io-2.4.jar lib/commons-collections-3.2.2.jar lib/gson-2.2.4.jar l
+ ib/jetty-util-6.1.26.jar lib/xercesImpl-2.9.1.jar lib/hk2-utils-2.4.0
+ -b34.jar lib/aopalliance-repackaged-2.4.0-b34.jar lib/javassist-3.18.
+ 1-GA.jar lib/commons-digester-1.8.jar lib/commons-beanutils-core-1.8.
+ 0.jar lib/jline-0.9.94.jar lib/xml-apis-1.3.04.jar lib/guice-3.0.jar 
+ lib/javax.inject-1.jar lib/commons-beanutils-1.7.0.jar lib/httpcore-4
+ .2.4.jar lib/junit-3.8.1.jar lib/jettison-1.1.jar lib/stax-api-1.0-2.
+ jar lib/aopalliance-1.0.jar lib/cglib-2.2.1-v20090111.jar
+Main-Class: JavaSparkPi
+
