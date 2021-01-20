@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public final class JavaSparkConnect {
+public final class JavaSparkSql {
 
     public static void main(String[] args) {
         SparkSession spark = SparkSession
