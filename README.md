@@ -10,7 +10,11 @@ export SPARK_HOME=/opt/cloudera/parcels/SPARK2/lib/spark2/
 
 $SPARK_HOME/bin/spark-submit   \
    --master yarn \
+   # 指定main class
    --class JavaSparkConnect \
+   # 指定dependency jar 包
+   --jars $(echo /opt/libs/lib/*.jar | tr ' ' ',')
+   # 指定要執行的程式jar包
    /opt/libs/sparkTest-1.0-SNAPSHOT.jar 80
    
 ```  
