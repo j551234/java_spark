@@ -1,7 +1,4 @@
-import org.apache.spark.sql.Dataset;
-import org.apache.spark.sql.Encoder;
-import org.apache.spark.sql.Encoders;
-import org.apache.spark.sql.SparkSession;
+import org.apache.spark.sql.*;
 
 import javax.xml.crypto.Data;
 
@@ -33,6 +30,17 @@ public class JavaSparkJoin {
                         table1.col("t2").alias("t2"),
                         newTable1.col("t3").alias("t3")).as(personEncoder);
         joinRow.show();
+
+        // example for arg
+
+        Dataset<Row> showTable =
+                spark.sql("select * from test.newtable1  ");
+
+        Dataset<Row> aggTable =showTable.groupBy("t1").agg(
+                functions.count("t1").as("count"),
+                functions.sum("t3").as("maxt3")
+        );
+        aggTable.show();
         spark.stop();
     }
 }
