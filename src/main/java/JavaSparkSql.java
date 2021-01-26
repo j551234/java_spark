@@ -26,8 +26,8 @@ public final class JavaSparkSql {
         sdf.applyPattern("yyyy-MM-dd HH:mm:ss a");
         Date date = new Date();
 
-        data1.setT1("T1" + sdf.format(date));
-        data1.setT2("T2" + sdf.format(date));
+        data1.setT1("T1@" + sdf.format(date));
+        data1.setT2("T2@" + sdf.format(date));
         data1.setT3(1);
         rowList.add(data1);
 
@@ -35,15 +35,16 @@ public final class JavaSparkSql {
         Dataset<Row> saveData = spark.createDataFrame(rowList, TableModel.class);
         // example for save
         saveData.write().format("Hive")
-                .mode(SaveMode.Overwrite)
+                .mode(SaveMode.Append)
                 .saveAsTable("test.table1");
 
-        // example for select
+        // example for select as object
         Encoder<TableModel> personEncoder = Encoders.bean(TableModel.class);
         Dataset<TableModel> newTable =
                 spark.sql("select * from test.table1  ").as(personEncoder);
         newTable.show();
-
+        List<TableModel> tableModelList = newTable.collectAsList();
+        tableModelList.forEach(s -> System.out.println("this is" + s.getT1()));
 
         spark.stop();
     }
