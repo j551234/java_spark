@@ -1,3 +1,5 @@
+import org.apache.spark.sql.types.Decimal;
+
 public class TableModel {
     private String t1;
     private String t2;

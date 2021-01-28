@@ -41,10 +41,27 @@ public final class JavaSparkSql {
         // example for select as object
         Encoder<TableModel> personEncoder = Encoders.bean(TableModel.class);
         Dataset<TableModel> newTable =
-                spark.sql("select * from test.table1  ").as(personEncoder);
+                spark.sql("select * from test.table1  ").select(
+                      "t1","t2","t3"
+                ).as(personEncoder);
         newTable.show();
+
         List<TableModel> tableModelList = newTable.collectAsList();
         tableModelList.forEach(s -> System.out.println("this is" + s.getT1()));
+
+
+        // xx test model will be set by name
+        Dataset<Row> showTable =
+                spark.sql("select * from test.newtable1  ");
+
+        Encoder<JoinTable> tableModelEncoder = Encoders.bean(JoinTable.class);
+        Dataset<JoinTable> aggTable =showTable.groupBy("t2").agg(
+                functions.count("t1").as("t1"),
+                functions.sum("t3").as("t3")
+        ).as(tableModelEncoder);
+        aggTable.show();
+        List<JoinTable> aggList = aggTable.collectAsList();
+        aggList.forEach(s-> System.out.println("im t1 "+ s.getT1()));
 
         spark.stop();
     }
