@@ -3,7 +3,7 @@ import org.apache.spark.sql.types.Decimal;
 public class TableModel {
     private String t1;
     private String t2;
-    private int t3;
+    private Integer t3;
 
 
     public String getT1() {
@@ -22,11 +22,14 @@ public class TableModel {
         this.t2 = t2;
     }
 
-    public int getT3() {
+    public Integer getT3() {
         return t3;
     }
 
-    public void setT3(int t3) {
+    public void setT3(Integer t3) {
         this.t3 = t3;
     }
+
+
+
 }
