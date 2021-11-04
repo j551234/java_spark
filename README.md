@@ -39,6 +39,27 @@ $SPARK_HOME/bin/spark-submit   \
 * 如果執行print會在執行的機器上印出，client主要用於交互查詢使用，cluster則大多用於排程
 
 
+## sparksql連接hive(java code) ，舊版（2.x版支援）
+
+先建立sparksession 
+需在config裡設定hive存放的位置
+```java=
+        SparkSession spark = SparkSession
+                .builder()
+                .config("spark.sql.warehouse.dir", "/user/hive/warehouse/")
+                .appName("JavaSparkSQL")
+                .getOrCreate();
+```
+
+## sparksql連接hive(java code) ，新版（3.x版)
+要在spark的conf資料夾裡面擺放hive-site.xml
+```java=
+        SparkSession spark = SparkSession
+                .builder()
+                .appName("JavaSparkSQL")
+                .enableHiveSupport()
+                .getOrCreate();
+```
 # Intellij ssh submit spark job
 
 在run的設定中可新增ssh submit
