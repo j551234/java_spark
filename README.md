@@ -9,6 +9,7 @@ java 使用spark程式範例
 * 要在環境變數裡新增hadoop相關的系統變數
 
 
+
 # submit 腳本
 需指定 spark
 ```shell=
@@ -21,6 +22,8 @@ $SPARK_HOME/bin/spark-submit   \
    --master yarn \
    # 指定main class
    --class JavaSparkConnect \
+   
+   --deploy-mode client \
    # 指定hive連線資訊檔案
    --files /home/james/java_spark/hive-site.xml \
    # 指定dependency jar 包
@@ -28,7 +31,13 @@ $SPARK_HOME/bin/spark-submit   \
    # 指定要執行的程式jar包
    /opt/libs/sparkTest-1.0-SNAPSHOT.jar 80
    
-```  
+```
+## client mode 跟 cluster mode差異
+*主要差異為driver啟動位置
+* client mode啟動在值行submit.sh的機器上
+* cluster mode則啟動在yarn的resource manager上
+* 如果執行print會在執行的機器上印出，client主要用於交互查詢使用，cluster則大多用於排程
+
 
 # Intellij ssh submit spark job
 
