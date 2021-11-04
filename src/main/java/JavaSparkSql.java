@@ -10,6 +10,7 @@ public final class JavaSparkSql {
                 .builder()
                 .config("spark.sql.warehouse.dir", "/user/hive/warehouse/")
                 .appName("JavaSpark")
+                .enableHiveSupport()
                 .getOrCreate();
         Dataset<Row> tables = spark.sql("Show databases;");
         tables.show();
