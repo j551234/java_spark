@@ -38,6 +38,16 @@ $SPARK_HOME/bin/spark-submit   \
 * cluster mode則啟動在yarn的resource manager上
 * 如果執行print會在執行的機器上印出，client主要用於交互查詢使用，cluster則大多用於排程
 
+* yarn-client
+![](https://i.imgur.com/zp3BX5d.png)
+
+* yarn-cluster
+![](https://i.imgur.com/Ors2dXm.png)
+
+* difference
+![](https://i.imgur.com/eiay2aZ.png)
+
+
 
 ## sparksql連接hive(java code) ，舊版（2.x版支援）
 
@@ -60,22 +70,27 @@ $SPARK_HOME/bin/spark-submit   \
                 .enableHiveSupport()
                 .getOrCreate();
 ```
-# Intellij ssh submit spark job
+# Intellij submit job(Ultimate version)
 
 在run的設定中可新增ssh submit
 
-需安裝Big Data tool
-https://plugins.jetbrains.com/plugin/12494-big-data-tools
-設定使用ssh remote submit
-https://www.jetbrains.com/help/idea/big-data-tools-spark-submit.html#spark-submit
-需指定ssh連線資訊資訊
-設定使用sparkHome
-指定上傳jar檔位置
-並指定mainClass
-在BeforLaunch前新增build的步驟
-![](https://i.imgur.com/iMHZpTH.png)
+* 需安裝Big Data tool
+* https://plugins.jetbrains.com/plugin/12494-big-data-tools
+* 設定使用ssh remote submit
+* https://www.jetbrains.com/help/idea/big-data-tools-spark-submit.html#spark-submit
+* 需指定ssh連線資訊資訊
+* 設定使用sparkHome
+* 指定上傳jar檔位置
+* 並指定mainClass
+* 在BeforLaunch前新增build的步驟
+* ![](https://i.imgur.com/iMHZpTH.png)
 
 
 
-# api document
+
+## reference
 https://sparkbyexamples.com/spark/spark-drop-column-from-dataframe-dataset/
+
+https://data-flair.training/blogs/how-apache-spark-works/
+
+https://blog.csdn.net/zpf336/article/details/83006569
